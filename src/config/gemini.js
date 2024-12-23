@@ -21,7 +21,7 @@ import {
     responseMimeType: "text/plain",
   };
   
-  async function run(prompt) {
+  async function runChat(prompt) {
     const chatSession = model.startChat({
       generationConfig,
       history: [
@@ -33,4 +33,4 @@ import {
     console.log(result.response.text());
   }
   
- export default run 
+ export default runChat ; 

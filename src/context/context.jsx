@@ -1,11 +1,20 @@
 import { createContext } from "react";
+import runChat from "../config/gemini";
 
-export const context = createContext();
+export const Context = createContext();
 
 const ContextProvider = (props) => {
+  const onSent = async (promt) => {
+    await runChat(promt);
+  };
+
+  onSent("indiar sob koti rajjer name bolun bengali te");
+
   const contextValue = {};
 
   return (
-    <ContextProvider.Provider value={contextValue}>{}</ContextProvider.Provider>
+    <Context.Provider value={contextValue}>{props.children}</Context.Provider>
   );
 };
+
+export default ContextProvider;

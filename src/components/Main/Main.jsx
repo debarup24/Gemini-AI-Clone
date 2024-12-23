@@ -89,7 +89,7 @@ const Main = () => {
           </div>
           <p className="text-sm font-medium my-3 mt-4 text-gray-500 mx-auto text-center">
             zinAIous may display inaccurate info, including about people, so
-            double-check its responses.Your privacy and Gemini Apps
+            double-check its responses.Your <b>privacy</b> and Gemini Apps
           </p>
         </div>
       </div>
