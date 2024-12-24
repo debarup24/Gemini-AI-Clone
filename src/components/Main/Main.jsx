@@ -96,7 +96,7 @@ const Main = () => {
                 src={assets.user_icon}
                 alt=""
               />
-              <p className=" font-bold">{recentPrompt}</p>
+              <p className=" text-xl font-bold">{recentPrompt}</p>
             </div>
             <div className="flex items-start gap-4">
               <img className="w-10" src={assets.gemini_icon} alt="" />
@@ -139,7 +139,8 @@ const Main = () => {
           </div>
           <p className="text-sm font-medium my-3 mt-4 text-gray-500 mx-auto text-center">
             zinAIous may display inaccurate info, including about people, so
-            double-check its responses.Your <b>privacy</b> and Gemini Apps
+            double-check its responses.Your <b>privacy</b> and <b>zinAIous</b>{" "}
+            Apps
           </p>
         </div>
       </div>
