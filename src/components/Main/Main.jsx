@@ -90,13 +90,28 @@ const Main = () => {
           </>
         ) : (
           <div className="py-0 px-[5%] max-h-[70vh] overflow-y-scroll no-scrollbar">
-            <div className="my-10 mx-0 flex items-center gap-3">
-              <img src={assets.user_icon} alt="" />
-              <p>{recentPrompt}</p>
+            <div className="my-10 mx-0 flex items-center gap-5">
+              <img
+                className="w-12 rounded-full"
+                src={assets.user_icon}
+                alt=""
+              />
+              <p className=" font-bold">{recentPrompt}</p>
             </div>
-            <div className="resultdata">
-              <img src={assets.gemini_icon} alt="" />
-              <p dangerouslySetInnerHTML={{ __html: resultData }}></p>
+            <div className="flex items-start gap-4">
+              <img className="w-10" src={assets.gemini_icon} alt="" />
+              {loading ? (
+                <div className="w-full flex flex-col gap-2">
+                  <hr className="rounded-md bg-gradient-to-r from-rose-100 via-purple-200 to-red-300 h-4 animate-pulse" />
+                  <hr className="rounded-md bg-gradient-to-r from-rose-100 via-purple-200 to-red-300 h-4 animate-pulse" />
+                  <hr className="rounded-md bg-gradient-to-r from-rose-100 via-purple-200 to-red-300 h-4 animate-pulse" />{" "}
+                </div>
+              ) : (
+                <p
+                  className="text-lg font-normal leading-[1.8]"
+                  dangerouslySetInnerHTML={{ __html: resultData }}
+                ></p>
+              )}
             </div>
           </div>
         )}
