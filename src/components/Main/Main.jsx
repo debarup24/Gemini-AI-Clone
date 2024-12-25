@@ -17,7 +17,10 @@ const Main = () => {
   return (
     <div className=" flex-1 flex-row min-h-screen pb-[15vh] relative">
       <div className="flex items-center justify-between text-xl mt-3 py-2 px-5">
-        <p className="text-2xl font-semibold text-slate-700">Gemini</p>
+        <div className=" flex flex-row gap-1">
+          <p className="text-2xl font-semibold text-slate-700">Gemini</p>
+          <img className="w-6" src={assets.gemini_icon} alt="" />
+        </div>
         <img
           className="w-11 border rounded-full"
           src={assets.user_icon}
@@ -100,9 +103,9 @@ const Main = () => {
               <img className="w-10" src={assets.gemini_icon} alt="" />
               {loading ? (
                 <div className="w-full flex flex-col gap-2">
-                  <hr className="rounded-md bg-gradient-to-r from-rose-100 via-purple-200 to-red-300 h-4 animate-pulse" />
-                  <hr className="rounded-md bg-gradient-to-r from-rose-100 via-purple-200 to-red-300 h-4 animate-pulse" />
-                  <hr className="rounded-md bg-gradient-to-r from-rose-100 via-purple-200 to-red-300 h-4 animate-pulse" />{" "}
+                  <hr className="rounded-md bg-gradient-to-r from-rose-100 via-purple-200 to-blue-300 h-4 animate-pulse" />
+                  <hr className="rounded-md bg-gradient-to-r from-rose-100 via-purple-200 to-blue-300 h-4 animate-pulse" />
+                  <hr className="rounded-md bg-gradient-to-r from-rose-100 via-purple-200 to-blue-300 h-4 animate-pulse" />{" "}
                 </div>
               ) : (
                 <p
