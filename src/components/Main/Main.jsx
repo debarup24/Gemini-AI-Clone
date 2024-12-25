@@ -17,9 +17,7 @@ const Main = () => {
   return (
     <div className=" flex-1 flex-row min-h-screen pb-[15vh] relative">
       <div className="flex items-center justify-between text-xl mt-3 py-2 px-5">
-        <p className="text-2xl font-bold text-slate-700">
-          zin<span className="text-red-600">AI</span>ous
-        </p>
+        <p className="text-2xl font-semibold text-slate-700">Gemini</p>
         <img
           className="w-11 border rounded-full"
           src={assets.user_icon}
@@ -138,8 +136,8 @@ const Main = () => {
             </div>
           </div>
           <p className="text-sm font-medium my-3 mt-4 text-gray-500 mx-auto text-center">
-            zinAIous may display inaccurate info, including about people, so
-            double-check its responses.Your <b>privacy</b> and <b>zinAIous</b>{" "}
+            Gemini may display inaccurate info, including about people, so
+            double-check its responses.Your <b>privacy</b> and <b>Gemini</b>{" "}
             Apps
           </p>
         </div>

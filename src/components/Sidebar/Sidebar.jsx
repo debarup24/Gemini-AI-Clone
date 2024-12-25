@@ -6,6 +6,11 @@ const Sidebar = () => {
   const [extended, setExtended] = useState(false);
   const { onSent, prevPrompts, setRecentPrompt } = useContext(Context);
 
+  const loadPromt = async (prompt) => {
+    setRecentPrompt(prompt);
+    await onSent(prompt);
+  };
+
   return (
     <div className="min-h-screen py-6 px-2 inline-flex flex-col justify-between bg-slate-100 shadow-md shadow-rose-300">
       {/* Top Part */}
@@ -29,7 +34,10 @@ const Sidebar = () => {
             <p className="mt-8 mb-5">Recent</p>
             {prevPrompts.map((item, index) => {
               return (
-                <div className="flex items-start gap-3 p-2 my-1 pr-10 cursor-pointer border rounded-[48px] hover:bg-slate-200">
+                <div
+                  onClick={() => loadPromt(item)}
+                  className="flex items-start gap-3 p-2 my-1 pr-10 cursor-pointer border rounded-[48px] hover:bg-slate-200"
+                >
                   <img className="w-6" src={assets.message_icon} alt="" />
                   <p className="text-neutral-600">{item.slice(0, 15)} ...</p>
                 </div>
