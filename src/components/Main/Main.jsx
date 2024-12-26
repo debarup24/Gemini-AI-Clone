@@ -4,6 +4,7 @@ import { Context } from "../../context/context";
 import { div } from "framer-motion/client";
 import Greetings from "./Greetings";
 import PromptCards from "./PromptCards";
+import ShimmerUI from "./ShimmerUI";
 
 const Main = () => {
   const {
@@ -56,9 +57,7 @@ const Main = () => {
               <img className="w-10" src={assets.gemini_icon} alt="" />
               {loading ? (
                 <div className="w-full flex flex-col gap-2">
-                  <hr className="rounded-md bg-gradient-to-r from-rose-100 via-purple-200 to-blue-300 h-4 animate-pulse" />
-                  <hr className="rounded-md bg-gradient-to-r from-rose-100 via-purple-200 to-blue-300 h-4 animate-pulse" />
-                  <hr className="rounded-md bg-gradient-to-r from-rose-100 via-purple-200 to-blue-300 h-4 animate-pulse" />{" "}
+                  <ShimmerUI />
                 </div>
               ) : (
                 <p
