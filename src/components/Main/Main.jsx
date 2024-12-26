@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import { assets } from "../../assets/assets";
 import { Context } from "../../context/context";
 import { div } from "framer-motion/client";
+import Greetings from "./Greetings";
+import PromptCards from "./PromptCards";
 
 const Main = () => {
   const {
@@ -33,60 +35,11 @@ const Main = () => {
       <div className="w-[900px] m-auto">
         {!showResult ? (
           <>
-            <div className="my-8 text-6xl font-semibold text-slate-500 p-5">
-              <p className="mb-4">
-                <span className="bg-gradient-to-r from-blue-500 via-purple-400 to-red-400 bg-clip-text text-transparent">
-                  Hello, Developer
-                </span>
-              </p>
-              <p>How can I help you today? </p>
-            </div>
+            <Greetings />
 
             {/* cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-3">
-              <div className="h-52 p-4  relative cursor-pointer bg-gray-200 hover:bg-slate-300 rounded-xl shadow-md shadow-cyan-300">
-                <p className="text-gray-600 font-semibold mt-1">
-                  Suggest beautiful places to visit on an upcoming road trip
-                </p>
-                <img
-                  className="w-9 p-1 absolute bg-slate-50 rounded-full bottom-2 right-2"
-                  src={assets.compass_icon}
-                  alt=""
-                />
-              </div>
-
-              <div className="h-52 p-4  relative cursor-pointer bg-gray-200 hover:bg-slate-300 rounded-xl shadow-md shadow-sky-400">
-                <p className="text-gray-600 font-semibold mt-1">
-                  Briefly summarize this concept: startup product market fit
-                </p>
-                <img
-                  className="w-9 p-1 absolute bg-slate-50 rounded-full bottom-2 right-2"
-                  src={assets.bulb_icon}
-                  alt=""
-                />
-              </div>
-
-              <div className="h-52 p-4  relative cursor-pointer  bg-gray-200 hover:bg-slate-300 rounded-xl shadow-md shadow-purple-300">
-                <p className="text-gray-600 font-semibold mt-1">
-                  Tell me the difference between React js and React native
-                </p>
-                <img
-                  className="w-9 p-1 absolute bg-slate-50 rounded-full bottom-2 right-2"
-                  src={assets.code_icon}
-                  alt=""
-                />
-              </div>
-
-              <div className="h-52 p-4  relative cursor-pointer  bg-gray-200 hover:bg-slate-300 rounded-xl shadow-md shadow-red-300">
-                <p className="text-gray-600 font-semibold mt-1">
-                  Brainstorm team bonding activities for our work retreat
-                </p>
-                <img
-                  className="w-9 p-1 absolute bg-slate-50 rounded-full bottom-2 right-2"
-                  src={assets.message_icon}
-                  alt=""
-                />
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 p-1">
+              <PromptCards />
             </div>
           </>
         ) : (
