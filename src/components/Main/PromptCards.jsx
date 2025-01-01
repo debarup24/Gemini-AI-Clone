@@ -3,7 +3,7 @@ import { assets } from "../../assets/assets";
 
 const PromptCards = () => {
   return (
-    <div className="flex flex-row w-[900px] m-auto gap-4 p-3">
+    <div className="flex flex-col md:flex md:flex-row w-screen md:w-[900px] md:m-auto gap-4 p-1 md:p-3">
       <div className="h-52 p-4  relative cursor-pointer bg-gray-200 hover:bg-slate-300 rounded-xl shadow-md shadow-cyan-300">
         <p className="text-gray-600 font-semibold mt-1">
           Suggest beautiful places to visit in Udaipur, Rajasthan, India
@@ -37,7 +37,7 @@ const PromptCards = () => {
         />
       </div>
 
-      <div className="h-52 p-4  relative cursor-pointer  bg-gray-200 hover:bg-slate-300 rounded-xl shadow-md shadow-red-300">
+      <div className="h-52 p-4 mb-16 md:mb-1 relative cursor-pointer  bg-gray-200 hover:bg-slate-300 rounded-xl shadow-md shadow-red-300">
         <p className="text-gray-600 font-semibold mt-1">
           Brainstorm team bonding activities for our work retreat
         </p>

@@ -12,7 +12,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="min-h-screen py-6 px-2 inline-flex flex-col justify-between bg-slate-100 shadow-md shadow-rose-300">
+    <div className="hidden md:min-h-screen py-6 px-2 md:inline-flex md:flex-col justify-between bg-slate-100 shadow-md shadow-rose-300">
       {/* Top Part */}
       <div className="ml-3 block cursor-pointer">
         <img

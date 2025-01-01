@@ -33,7 +33,7 @@ const Main = () => {
 
       {/* main container */}
 
-      <div className="w-[900px] m-auto">
+      <div className="w-screen md:w-[900px] m-auto">
         {!showResult ? (
           <>
             <Greetings />
@@ -71,7 +71,7 @@ const Main = () => {
 
         {/* Main Bottom */}
         <div className="absolute bottom-6 w-full max-w-[900px] px-5 mx-auto rounded-3xl">
-          <div className="flex items-center justify-between gap-5 bg-gray-100 py-3 px-5 border rounded-[48px] shadow-sm shadow-red-400">
+          <div className="flex items-center justify-between gap-2 md:gap-5 bg-gray-100 py-3 px-5 border rounded-[48px] shadow-sm shadow-red-400">
             <input
               onChange={(e) => setInput(e.target.value)}
               value={input}
@@ -80,11 +80,11 @@ const Main = () => {
               placeholder="Start Messaging"
             />
             <div className="flex flex-row items-center justify-between gap-5">
-              <img className="w-6" src={assets.gallery_icon} alt="" />
-              <img className="w-6" src={assets.mic_icon} alt="" />
+              <img className="w-5 md:w-6" src={assets.gallery_icon} alt="" />
+              <img className="w-5 md:w-6" src={assets.mic_icon} alt="" />
               <img
                 onClick={() => onSent()}
-                className="w-6 cursor-pointer"
+                className="w-5 md:w-6 mr-1 cursor-pointer"
                 src={assets.send_icon}
                 alt=""
               />
