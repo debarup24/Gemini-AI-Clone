@@ -33,7 +33,7 @@ const Main = () => {
 
       {/* main container */}
 
-      <div className="w-screen md:w-[900px] m-auto">
+      <div className="w-screen md:w-[900px] m-auto ">
         {!showResult ? (
           <>
             <Greetings />
@@ -44,7 +44,7 @@ const Main = () => {
             </div>
           </>
         ) : (
-          <div className="py-0 px-[5%] max-h-[70vh] overflow-y-scroll no-scrollbar">
+          <div className="py-2 pb-6 md:py-0 px-[5%] max-h-[70vh] overflow-y-scroll no-scrollbar">
             <div className="my-10 mx-0 flex items-center gap-5">
               <img
                 className="w-12 rounded-full"
@@ -70,8 +70,8 @@ const Main = () => {
         )}
 
         {/* Main Bottom */}
-        <div className="absolute bottom-6 w-full max-w-[900px] px-5 mx-auto rounded-3xl">
-          <div className="flex items-center justify-between gap-2 md:gap-5 bg-gray-100 py-3 px-5 border rounded-[48px] shadow-sm shadow-red-400">
+        <div className="absolute bottom-6 w-full mt-2 md:mt-1 max-w-[900px] px-5 mx-auto rounded-3xl">
+          <div className="flex items-center justify-between gap-3 md:gap-5 bg-gray-100 py-3 px-5 border rounded-[48px] shadow-sm shadow-red-400">
             <input
               onChange={(e) => setInput(e.target.value)}
               value={input}
@@ -79,12 +79,12 @@ const Main = () => {
               type="text"
               placeholder="Start Messaging"
             />
-            <div className="flex flex-row items-center justify-between gap-5">
-              <img className="w-5 md:w-6" src={assets.gallery_icon} alt="" />
-              <img className="w-5 md:w-6" src={assets.mic_icon} alt="" />
+            <div className="flex flex-row items-center justify-between gap-2 md:gap-5">
+              <img className=" w-4 md:w-6" src={assets.gallery_icon} alt="" />
+              <img className="w-4 md:w-6" src={assets.mic_icon} alt="" />
               <img
                 onClick={() => onSent()}
-                className="w-5 md:w-6 mr-1 cursor-pointer"
+                className="w-4 md:w-6 mr-1 cursor-pointer"
                 src={assets.send_icon}
                 alt=""
               />
