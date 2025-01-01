@@ -45,8 +45,6 @@ const ContextProvider = (props) => {
     setInput("");
   };
 
-  // onSent("indiar sob koti rajjer name bolun bengali te");
-
   const contextValue = {
     prevPrompts,
     setPrevPrompts,
