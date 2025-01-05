@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { assets } from "../../assets/assets";
 import { Context } from "../../context/context";
-import { div } from "framer-motion/client";
 import Greetings from "./Greetings";
 import PromptCards from "./PromptCards";
 import ShimmerUI from "./ShimmerUI";
