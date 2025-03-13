@@ -28,7 +28,7 @@ const PromptCards = () => {
 
       <div className="h-52 p-4  relative cursor-pointer  bg-gray-200 hover:bg-slate-300 rounded-xl shadow-md shadow-purple-300">
         <p className="text-gray-600 font-semibold mt-1">
-          What is the difference between React js and React native
+          What is the difference between context API and Redux 
         </p>
         <img
           className="w-9 p-1 absolute bg-slate-50 rounded-full bottom-2 right-2"
