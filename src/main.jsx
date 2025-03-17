@@ -6,6 +6,7 @@ import ContextProvider from "./context/context.jsx";
 
 createRoot(document.getElementById("root")).render(
   <ContextProvider>
-    <App />
+    {/* providing app within the context */}
+    <App /> 
   </ContextProvider>
 );
